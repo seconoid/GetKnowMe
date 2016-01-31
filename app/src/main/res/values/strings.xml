@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Get know me !</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- buttons -->
+    <string name="btn_tw">Twitter</string>
+    <string name="btn_gmail">Gmail</string>
+
+    <!-- mail -->
+    <string name="mailTo">seconsecond@gmail.com</string>
+    <string name="mailSub">moge</string>
+    <string name="mailText">おめでとう！おめでとう！</string>
+</resources>
