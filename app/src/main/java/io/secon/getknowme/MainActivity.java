@@ -11,7 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,8 +23,11 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // インスタンス化
-        Button twBtn = (Button) findViewById(R.id.twBtn);
-        Button mailBtn = (Button) findViewById(R.id.mailBtn);
+        ImageView twBtn = (ImageView) findViewById(R.id.twBtn);
+        ImageView fbBtn = (ImageView) findViewById(R.id.fbBtn);
+        ImageView gpBtn = (ImageView) findViewById(R.id.gpBtn);
+        ImageView mailBtn = (ImageView) findViewById(R.id.mailBtn);
+        ImageView githubBtn = (ImageView) findViewById(R.id.githubBtn);
 
         // リスナーの設定
         twBtn.setOnClickListener(new View.OnClickListener() {
@@ -33,8 +36,19 @@ public class MainActivity extends AppCompatActivity {
                 btnClick(v);
             }
         });
-
+        fbBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnClick(v);
+            }
+        });
         mailBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnClick(v);
+            }
+        });
+        githubBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 btnClick(v);
@@ -58,8 +72,14 @@ public class MainActivity extends AppCompatActivity {
             case (R.id.twBtn):
                 // Toast.makeText(MainActivity.this, "hoge", Toast.LENGTH_LONG).show();
                 intent = new Intent(intent.ACTION_VIEW,
-                        Uri.parse("https://twitter.com/secon_second"));
+                        Uri.parse("https://www.twitter.com/secon_second/"));
                 break;
+
+            case (R.id.fbBtn):
+                intent = new Intent(intent.ACTION_VIEW,
+                        Uri.parse("https://www.facebook.com/profile.php?id=100004091210706"));
+                break;
+
             case (R.id.mailBtn):
                 intent = new Intent(intent.ACTION_SEND);
                 intent.setType("text/email");

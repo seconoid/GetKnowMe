@@ -10,23 +10,80 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main" tools:context=".MainActivity">
 
-
-    <LinearLayout
-        android:orientation="horizontal"
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/twBtn"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:text="@string/btn_tw"/>
-        <Button
-            android:id="@+id/mailBtn"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:text="@string/btn_gmail"/>
-    </LinearLayout>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/btn_mergin"
+            android:layout_marginTop="@dimen/btn_mergin">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_size"
+                android:id="@+id/twBtn"
+                android:layout_weight="1"
+                android:src="@drawable/tw"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_size"
+                android:id="@+id/fbBtn"
+                android:layout_weight="1"
+                android:src="@drawable/fb"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_size"
+                android:id="@+id/gpBtn"
+                android:layout_weight="1"
+                android:src="@drawable/gp"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_size"
+                android:id="@+id/mailBtn"
+                android:layout_weight="1"
+                android:src="@drawable/mail"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/btn_mergin"
+            android:layout_marginTop="@dimen/btn_mergin">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_size"
+                android:id="@+id/githubBtn"
+                android:layout_weight="1"
+                android:src="@drawable/github"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_size"
+                android:id="@+id/bBtn"
+                android:layout_weight="1"
+                android:src="@drawable/fb"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_size"
+                android:id="@+id/gBtn"
+                android:layout_weight="1"
+                android:src="@drawable/gp"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_size"
+                android:id="@+id/mBtn"
+                android:layout_weight="1"
+                android:src="@drawable/mail"/>
+
+        </TableRow>
+    </TableLayout>
 </LinearLayout>
