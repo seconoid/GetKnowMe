@@ -8,6 +8,5 @@
 
     <!-- mail -->
     <string name="mailTo">seconsecond@gmail.com</string>
-    <string name="mailSub">moge</string>
-    <string name="mailText">おめでとう！おめでとう！</string>
+    <string name="mailSub">FeedBack</string>
 </resources>

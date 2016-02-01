@@ -1,6 +1,7 @@
 package io.secon.getknowme;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -61,11 +62,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case (R.id.mailBtn):
                 intent = new Intent(intent.ACTION_SEND);
-                intent.putExtra(Intent.EXTRA_EMAIL, R.string.mailTo);
-                intent.putExtra(Intent.EXTRA_SUBJECT, R.string.mailSub);
-                intent.putExtra(Intent.EXTRA_TEXT, "おめ～");
+                intent.setType("text/email");
 
-                intent.setType("message/rfc822");
+                // 文字列を取得
+                Resources res = getResources();
+                String[] mailTo = {res.getString(R.string.mailTo)};
+                String mailSub = res.getString(R.string.mailSub);
+
+                intent.putExtra(Intent.EXTRA_EMAIL, mailTo);
+                intent.putExtra(Intent.EXTRA_SUBJECT, mailSub);
         }
         if (intent != null){
             startActivity(intent);
