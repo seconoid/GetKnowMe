@@ -17,8 +17,8 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/btn_mergin"
-            android:layout_marginTop="@dimen/btn_mergin">
+            android:layout_marginBottom="@dimen/btn_margin"
+            android:layout_marginTop="@dimen/btn_margin">
 
             <ImageView
                 android:layout_width="0dp"
@@ -53,8 +53,8 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/btn_mergin"
-            android:layout_marginTop="@dimen/btn_mergin">
+            android:layout_marginBottom="@dimen/btn_margin"
+            android:layout_marginTop="@dimen/btn_margin">
 
             <ImageView
                 android:layout_width="0dp"
