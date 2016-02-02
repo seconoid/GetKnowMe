@@ -5,6 +5,6 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <!-- btn -->
-    <dimen name="btn_mergin">16dp</dimen>
+    <dimen name="btn_margin">16dp</dimen>
     <dimen name="btn_size">58dp</dimen>
 </resources>
