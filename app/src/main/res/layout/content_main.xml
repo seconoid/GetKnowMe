@@ -66,23 +66,23 @@
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="@dimen/btn_size"
-                android:id="@+id/bBtn"
+                android:id="@+id/googleBtn"
                 android:layout_weight="1"
-                android:src="@drawable/fb"/>
+                android:src="@drawable/google"/>
 
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="@dimen/btn_size"
                 android:id="@+id/gBtn"
                 android:layout_weight="1"
-                android:src="@drawable/gp"/>
+                android:src="@drawable/blank"/>
 
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="@dimen/btn_size"
                 android:id="@+id/mBtn"
                 android:layout_weight="1"
-                android:src="@drawable/mail"/>
+                android:src="@drawable/blank"/>
 
         </TableRow>
     </TableLayout>

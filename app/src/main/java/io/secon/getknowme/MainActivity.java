@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView gpBtn = (ImageView) findViewById(R.id.gpBtn);
         ImageView mailBtn = (ImageView) findViewById(R.id.mailBtn);
         ImageView githubBtn = (ImageView) findViewById(R.id.githubBtn);
+        ImageView googleBtn = (ImageView) findViewById(R.id.googleBtn);
 
         // リスナーの設定
         twBtn.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
                 btnClick(v);
             }
         });
+        googleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnClick(v);
+            }
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -69,17 +76,20 @@ public class MainActivity extends AppCompatActivity {
     public void btnClick(View v){
         Intent intent = null;
         switch(v.getId()){
+            // twitter
             case (R.id.twBtn):
                 // Toast.makeText(MainActivity.this, "hoge", Toast.LENGTH_LONG).show();
                 intent = new Intent(intent.ACTION_VIEW,
                         Uri.parse("https://www.twitter.com/secon_second/"));
                 break;
 
+            // facebook
             case (R.id.fbBtn):
                 intent = new Intent(intent.ACTION_VIEW,
-                        Uri.parse("https://www.facebook.com/profile.php?id=100004091210706"));
+                        Uri.parse("https://www.facebook.com/profile.php?id=100004091210706/"));
                 break;
 
+            // mail
             case (R.id.mailBtn):
                 intent = new Intent(intent.ACTION_SEND);
                 intent.setType("text/email");
@@ -91,6 +101,19 @@ public class MainActivity extends AppCompatActivity {
 
                 intent.putExtra(Intent.EXTRA_EMAIL, mailTo);
                 intent.putExtra(Intent.EXTRA_SUBJECT, mailSub);
+                break;
+
+            // github
+            case (R.id.githubBtn):
+                intent = new Intent(intent.ACTION_VIEW,
+                        Uri.parse("https://github.com/seconoid/"));
+                break;
+
+            // google+
+            case (R.id.googleBtn):
+                intent = new Intent(intent.ACTION_VIEW,
+                        Uri.parse("https://plus.google.com/106969377333494811240"));
+                break;
         }
         if (intent != null){
             startActivity(intent);
